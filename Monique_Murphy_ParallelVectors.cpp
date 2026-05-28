@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-// Funtion 1: findItem - to find the index of an item in the names vector
+// Function 1: findItem - to find the index of an item in the names vector
 int findItem(vector<string> names, string itemName)
 {
     for (int i = 0; i <names.size(); i++)
@@ -13,20 +13,20 @@ int findItem(vector<string> names, string itemName)
         // compare item to what the user is searching for
         if (names[i] == itemName)
         {
-            return i; // return the position of the item in the vector
+            return i; // return the position of the item in the inventory
         }
     }
     return -1; // return -1 if the item is not found
 }
 
-// Fruntion 2: addItem - to add a new item and its quantity to the vectors
+// Function 2: addItem - to add a new item and its quantity to the inventory
 void addItem(vector<string>& names, vector<int>& quantities, string itemName, int quantity)
 {
    int index = findItem(names, itemName);
 
    if (index == -1)
    {
-    // item is not found, add to the vectors
+    // item is not found, add to the inventory
     names.push_back(itemName);
     quantities.push_back(quantity);
    } else 
@@ -52,7 +52,7 @@ void distributeItem(vector<string>& names, vector<int>& quantities, string itemN
             cout << "Not enough stock" << endl;
         } else {
             quantities[index] -= quantity;
-            cout << "Item disributed!" << endl;
+            cout << "Item distributed!" << endl;
         }
     }
 }
