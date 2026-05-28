@@ -12,7 +12,7 @@ struct Item
     int quantity;
 };
 
-// Funtion 1: findItem - to find the index of an item in the names vector
+// Function 1: findItem - to find the index of an item in the inventory
 int findItem(vector<Item> inventory, string itemName)
 {
     for (int i = 0; i <inventory.size(); i++)
@@ -26,7 +26,7 @@ int findItem(vector<Item> inventory, string itemName)
     return -1; // return -1 if the item is not found
 }
 
-// Fruntion 2: addItem - to add a new item and its quantity to the vectors
+// Function 2: addItem - to add a new item and its quantity to the inventory
 void addItem(vector<Item>& inventory, string itemName, int quantity)
 {
    int index = findItem(inventory, itemName);
@@ -36,7 +36,7 @@ void addItem(vector<Item>& inventory, string itemName, int quantity)
     Item newItem;
     newItem.name = itemName;
     newItem.quantity = quantity;
-    // item is not found, add to the vectors
+    // item is not found, add to the inventory
     inventory.push_back(newItem);
    } 
    else 
